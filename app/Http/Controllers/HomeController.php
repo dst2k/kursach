@@ -25,4 +25,19 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function getForm()
+        {
+            return view('home');
+        }
+
+    /*public function upload(Request $request)
+        {
+            foreach ($request->image() as $image) {
+                foreach ($image as $i) {
+                    $i->move(storage_path('images'), time().'_'.$i->getClientOriginalName());
+                }
+            }
+            return "Успех";
+        }*/
 }

@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::post('upload', function() { echo 'hello';});
+Route::post('/upload', 'UploadController@upload');
+Route::get('/layouts', 'LayoutsController@index');
+Route::get('/collage/{id}', 'CollageController@show');
+Route::post('/preview', 'CollageController@index');
