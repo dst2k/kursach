@@ -7,25 +7,19 @@
 <p><img src="{{ url('storage/kursach/layouts/' . $layout->layout) }}" style="height: 300px"></p>
 @foreach($images as $image)
 
+<div class="layout">
 <p><img src="{{ url('storage/kursach/' . $image->image) }} " style="height: 100px"/></p>
 
 @for($i=1; $i<=$img_quantity; $i++)
-
-<div class="form-group row">
-    <div class="col-sm-3">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="check_list[]" value="{{ $i }}">
-        <label class="form-check-label" for="gridCheck1">
-          {{ $i }}
-        </label>
-      </div>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <input type="radio" name="image{{$i}}" value="{{$i}}" >{{$i}}
     </div>
   </div>
-
+</div>
 @endfor
-
-_________________________________________
-<p></p>
+</div>
 
 @endforeach
 

@@ -7,6 +7,8 @@ use App\User;
 use App\Layout;
 use App\Photo;
 use App\Image;
+use App\ImagePosition;
+use App\Collage;
 
 class CollageController extends Controller
 {
@@ -29,9 +31,9 @@ class CollageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        
     }
 
     /**
